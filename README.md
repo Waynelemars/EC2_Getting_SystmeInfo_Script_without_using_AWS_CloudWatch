@@ -1,7 +1,6 @@
 1. sudo yum install python-pip  or wget https://bootstrap.pypa.io/get-pip.py -O - | python
 2.sudo yum install gcc python-dev python-pip
   sudo pip install psutil
-  
-  
-  ![Alt text](restwithDB.jpg)
+
+  ![Alt text](restwithDB.png)
 
