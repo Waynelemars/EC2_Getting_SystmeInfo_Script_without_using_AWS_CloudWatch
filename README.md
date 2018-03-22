@@ -3,5 +3,5 @@
   sudo pip install psutil
   
   
-  ![Alt text](Waynelemars/GettingSystmeInfoScript/restwithDB.jpg?raw=true "Title")
+  ![Alt text](restwithDB.jpg)
 
