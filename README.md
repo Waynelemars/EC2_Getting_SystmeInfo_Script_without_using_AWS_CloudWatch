@@ -3,4 +3,5 @@
   sudo pip install psutil
 
   ![Alt text](restwithDB.png)
+  ![Alt text](onlyRest.png)
 
