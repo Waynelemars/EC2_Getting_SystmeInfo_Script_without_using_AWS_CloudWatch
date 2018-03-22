@@ -1,8 +1,4 @@
-import os
 import psutil
-pid = os.getpid()
-py = psutil.Process(pid)
-
 
 #CPUUtilization average
 cpuUse = psutil.cpu_percent(interval=1)
