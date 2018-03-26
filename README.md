@@ -185,6 +185,7 @@ server {
   
   
 4. on EC2 set security group (open port for)8080
+  [![Watch the video](restwithDB.png)](https://youtu.be/WBlGM_YzXz4)
 
   ![Alt text](restwithDB.png)
   ![Alt text](onlyRest.png)
