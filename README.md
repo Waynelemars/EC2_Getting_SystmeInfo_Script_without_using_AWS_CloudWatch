@@ -1,4 +1,4 @@
-How to run Flask App on EC2
+How to run Flask App on EC2 - You will only need your python code. you don't need entire folder for the app
 
 On AWS ubuntu ec2 environment (It is not working after setting up linux so I change it to using ubuntu and follow up video for setting up the environment: https://www.youtube.com/watch?v=kDRRtPO0YPA&t=561s)
 
