@@ -124,7 +124,9 @@ I doesn't work. So I change it to using ubuntu.
   
 4. After you run in on EC2, you can check the restful api internally by using
 curl http://127.0.0.1:5000/diskUseReadCount
-
+  [![Watch the video](restwithDB.png)](https://youtu.be/WBlGM_YzXz4)
+  ![Alt text](restwithDB.png)
+  ![Alt text](onlyRest.png)
 
 -------------------------------------------for external access. You should skip 3 and 4 and do step 5
 5.  install web server on ec2 
@@ -193,8 +195,5 @@ server {
   
   
 4. on EC2 set security group (open port for)8080
-  [![Watch the video](restwithDB.png)](https://youtu.be/WBlGM_YzXz4)
 
-  ![Alt text](restwithDB.png)
-  ![Alt text](onlyRest.png)
 
