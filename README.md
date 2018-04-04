@@ -18,45 +18,48 @@ $sudo apt-get update
 $sudo apt-get install python-pip nginx
 
 Step 5. configure nginx (It is going to act like proxy server)  
-		$ sudo /etc/init.d/nginx start
-		$ sudo rm /etc/nginx/sites-enabled/default
-		$ sudo touch /etc/nginx/sites-available/flask_settings
+		$ sudo /etc/init.d/nginx start  
+		$ sudo rm /etc/nginx/sites-enabled/default  
+		$ sudo touch /etc/nginx/sites-available/flask_settings  
 		$ sudo ln -s /etc/nginx/sites-available/flask_settings /etc/nginx/sites-enabled/flask_settings
 				-if you see ln: failed to create symbolic link '/etc/nginx/sites-available/flask_settings': File exists
 				-try to unlink this first: sudo unlink /etc/nginx/sites-available/flask_settings
-				-if it still doesn't work. You can skip this step
-		$ sudo vi /etc/nginx/sites-available/flask_settings
-			server {
+				-if it still doesn't work. You can skip this step  
+		$ sudo vi /etc/nginx/sites-available/flask_settings  
+```
+server {
 
        			 location / {
              		   proxy_pass http://127.0.0.1:8000;
         			}
 
 			}
+```
 			
-		- exit file using esc -> ":x"
+exit file using esc -> ":x"  
 Step 6. Restart nginx
-		$ sudo /etc/init.d/nginx restart
-Step 7. install virtualenv
-		$ pip install virtualenv
-Step 8. make your flask app a directory
-		$ mkdir my_flask_app
-		
-Step 9. cd to your flask app
-		$ cd my_flask_app
-Step 10. create a virtual environment in this directory
-		$ virtualenv env
-Step 11. activate it(must do)
-		$ source env/bin/activate
-Step 12. install flak and gunicorn
-		$ pip install flask gunicorn
-Step 13. install the library you need. EX: psutil
-		$ pip install psutil
-Step 14. create your app now
-		$touch info.py
-		$vi info.py
-		past the code to this file
+		$ sudo /etc/init.d/nginx restart  
+Step 7. install virtualenv  
+$ pip install virtualenv  
+Step 8. make your flask app a directory  
+$ mkdir my_flask_app  
 
+Step 9. cd to your flask app  
+$ cd my_flask_app  
+Step 10. create a virtual environment in this directory  
+$ virtualenv env  
+Step 11. activate it(must do)  
+$ source env/bin/activate  
+Step 12. install flak and gunicorn  
+$ pip install flask gunicorn  
+Step 13. install the library you need. EX: psutil  
+$ pip install psutil  
+Step 14. create your app now  
+$touch info.py  
+$vi info.py  
+past the code to this file
+
+```
 import os
 import psutil
 from flask import Flask
@@ -97,6 +100,7 @@ def diskRead():
                 
 Step 14 run the app using gunicorn. info is your python file name. app is fix name
 	$gunicorn info:app
+```
 	
 	
 	
