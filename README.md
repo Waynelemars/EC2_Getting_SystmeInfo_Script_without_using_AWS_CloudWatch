@@ -1,4 +1,8 @@
-How to run Flask App on EC2 - You will only need your python code. you don't need entire folder for the app
+# How to run Flask App on EC2
+
+You will only need your python code. you don't need entire folder for the app
+
+## Getting started
 
 On AWS ubuntu ec2 environment (It is not working after setting up linux so I change it to using ubuntu and follow up video for setting up the environment: https://www.youtube.com/watch?v=kDRRtPO0YPA&t=561s)
 
@@ -6,14 +10,14 @@ Step 1. Bring EC2 ubuntu up.
 
 Step 2. Go to this ec2 instance's security group to open port http 80(check security inbound rules)
 
-Step 3. Ssh to AWS using terminal(You need to know where is your pem file store)
-		$ sudo ssh -i path/monitoringTool.pem ubuntu@ec2-107-22-36-197.compute-1.amazonaws.com
+Step 3. Ssh to AWS using terminal(You need to know where is your pem file store)  
+  $ sudo ssh -i path/monitoringTool.pem ubuntu@ec2-107-22-36-197.compute-1.amazonaws.com
 
-Step 4. after your are in EC2.
-		$sudo apt-get update
-		$sudo apt-get install python-pip nginx
+Step 4. after your are in EC2.  
+$sudo apt-get update  
+$sudo apt-get install python-pip nginx
 
-Step 5. configure nginx (It is going to act like proxy server)
+Step 5. configure nginx (It is going to act like proxy server)  
 		$ sudo /etc/init.d/nginx start
 		$ sudo rm /etc/nginx/sites-enabled/default
 		$ sudo touch /etc/nginx/sites-available/flask_settings
